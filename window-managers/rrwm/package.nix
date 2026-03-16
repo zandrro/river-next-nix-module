@@ -16,13 +16,13 @@ let
 in
 rustPlatform.buildRustPackage {
   pname = "rrwm";
-  version = "unstable-2026-02-20";
+  version = "unstable-2026-03-16";
 
   src = fetchFromGitHub {
     owner = "cap153";
     repo = "rrwm";
-    rev = "8e8cb6bb50fb0ad9c108560c543f49aa3ccad8c3";
-    hash = "sha256-ctkxzFfxtf7r4RfZHlOEitZWty+ZtuKh1tAci7c1Lx8=";
+    rev = "42826f21a7a1c104e6900de3e87a4d0c5cf0c62a";
+    hash = "sha256-mI//8riGr41gUt0Ws/t6x8ycSaqS38LwnF5epjMUOo0=";
   };
 
   cargoHash = "sha256-8OiF34Aa/jH82MAcQ5HnIW+4Bi9wLK904kfJvdHVrEc=";

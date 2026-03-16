@@ -18,13 +18,13 @@ fcft,
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "kewuaa";
-  version = "unstable-2026-02-16";
+  version = "unstable-2026-03-16";
 
   src = fetchFromGitHub {
     owner = "kewuaa";
     repo = "kwm";
-    rev = "bba0540585734e027733bc9077cbc729ea37d6ee";
-    hash = "sha256-L3onRky3aS/P119NFujCzJiroKcN1uxQ8z0xI5fGbzs=";
+    rev = "ec2a001dffb2cca0078f5647171f99ec81677c2e";
+    hash = "sha256-8L/TS5LkpQlzhwI/Q2t/A06Gt8iWyFMvz48jepKfyqs=";
   };
 
   deps = callPackage ./build.zig.zon.nix { };

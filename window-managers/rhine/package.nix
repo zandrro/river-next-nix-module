@@ -13,13 +13,13 @@ wayland-scanner,
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "rhine";
-  version = "unstable-2026-01-30";
+  version = "unstable-2026-03-16";
 
   src = fetchFromCodeberg {
     owner = "Sivecano";
     repo = "rhine";
-    rev = "5a222116b0e75486c504a34495c1f1bf6ad88bb3";
-    hash = "sha256-e53q2P3Hbrot8TpcK9lCwpm0BL5HSvTDE+zax3b9yiw=";
+    rev = "33b491cc8291510f846a695ef73468e8c63d36c5";
+    hash = "sha256-h74l11CNwD4AxU39deAGge+72VvPMgi4zcV1GHntAl4=";
   };
 
   deps = callPackage ./build.zig.zon.nix { };

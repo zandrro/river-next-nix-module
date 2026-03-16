@@ -14,16 +14,16 @@ let
 in
 rustPlatform.buildRustPackage {
   pname = "orilla";
-  version = "unstable-2026-02-11";
+  version = "unstable-2026-03-16";
 
   src = fetchFromSourcehut {
     owner = "~hokiegeek";
     repo = "orilla";
-    rev = "870070ac5dca50a07fa5f1b7f544d0a49e82e118";
-    hash = "sha256-R2f7RXZwl2QCWh3EyUsEOfZZsYYk6mJjdE52G9TBtyo=";
+    rev = "bd77afb99a192c10211385df4555e68e786094fb";
+    hash = "sha256-FwLKvIB4VXRhD0/1HpEdGwMp/EfGqTC2AfVs354uD3c=";
   };
 
-  cargoHash = "sha256-0I7AiNaNlVG9Cvsz/DUMmgR6hBJAIJhn56nvGaqez88=";
+  cargoHash = "sha256-fTKgRSDtV+5Dn4QAfBYsUbdaNj5GsVAwnYVwpw7VJms=";
   patches = [ ./xdg-config-path.patch ];
 
   nativeBuildInputs = [

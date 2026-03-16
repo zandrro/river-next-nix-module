@@ -20,8 +20,8 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gwdg.de";
     owner = "leonhenrik.plickat";
     repo = "tarazed";
-    rev = "6380cbe42b4349cb8eac78075cebc696ba0cd4c3";
-    hash = "sha256-9xRhTQKaZegQ2LYuzcrjd6Qo00HR3UC9UVt3AP498RY=";
+    rev = "cd8dddf40db77006ebd91e8393f3cc8b07a41b9b";
+    hash = "sha256-FQit/nffkwNIOVu+ws105UpA4i5R6MyVimLtaFJe3Rc=";
   };
 
   nativeBuildInputs = [

@@ -65,14 +65,14 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "river-dev";
-  version = "0.4.0-dev";
+  version = "0.5.0-dev";
   outputs = [ "out" ] ++ lib.optionals withManpages [ "man" ];
 
   src = fetchFromCodeberg {
     owner = "river";
     repo = "river";
-    rev = "9436b049f9f2a097f8abb7965e21edc4ec3294d5";
-    hash = "sha256-VGpYLjIvtZLZ16vC1xIB9YNtE5JafVdifaxqWK7P5n4=";
+    rev = "431bd9481dad4cb93070b499814cfcef49f1f8ee";
+    hash = "sha256-bGa+5dWEFKM6zR9FBG1L3jDVA85JYcr1fcU4XhcKmLM=";
   };
 
   deps = callPackage ./build.zig.zon.nix { };

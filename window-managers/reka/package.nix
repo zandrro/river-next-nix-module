@@ -50,4 +50,6 @@ emacsPackages.trivialBuild {
     hash = "sha256-K4uk1Zuct0xpth/MyJNbhJ+qm2yia0zDoNplA/YX1kU=";
   };
   packageRequires = [ reka ];
+
+  passthru.reka-lib = reka;
 }

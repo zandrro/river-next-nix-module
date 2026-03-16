@@ -23,11 +23,11 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "river-0.4.0-dev-_G6Njuw5CwDKnBflrAA8ft0l30TgMyXHAdmxVCjZrd3V";
+    name = "river-0.4.0-dev-_G6NjtKJCwCbP3q1MyVChWBw-Yn_S9xOC51-N0DbNjkr";
     path = fetchgit {
       url = "https://codeberg.org/river/river";
-      rev = "e595425c4a2a4a13c23d4e09c3dc2386436b4e99";
-      hash = "sha256-kyNJfOXe1aRypHvbSTKh7+kNS3pNsWTRKXHBXmwCZ4U=";
+      rev = "958b0ac02b878c1d7f55e91dc1876414d70c884b";
+      hash = "sha256-F+77/BKfFI6HbuBiPLcGEBvXraoQYobXepJcuiDKwGw=";
     };
   }
   {
@@ -54,10 +54,11 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "wlroots-0.19.3-jmOlcuL_AwBHhLCwpFsXbTizE3q9BugFmGX-XIxqcPMc";
-    path = fetchzip {
-      url = "https://codeberg.org/ifreund/zig-wlroots/archive/v0.19.3.tar.gz";
-      hash = "sha256-rw2bafYcXTxMUtWF9ae++h0RjSfuvpCnIHGLrbLfQTQ=";
+    name = "wlroots-0.19.4-dev-jmOlcqgMBACgOFbQ0IIFURB7HztxzXL_A_3am6rAioTA";
+    path = fetchgit {
+      url = "https://codeberg.org/ifreund/zig-wlroots";
+      rev = "95c4341e3afe9496331baf2156a3ee15b2cb7bc0";
+      hash = "sha256-KUZkw0UKGt7ss0O2zXnNJVJIsxPKXM283NzbnCBzaes";
     };
   }
   {

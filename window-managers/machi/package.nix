@@ -20,8 +20,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "machi";
     repo = "machi";
-    rev = "097b31af73f3a5102a88947a731a1b91b50e3c8c";
-    hash = "sha256-LD5iLjqQbPPCVOhIZKAdgxScxivTk9GMuwFkNOnOmks=";
+    rev = "1a443d7c5d45304bb96c3f1b6a9f4e0cd2ea18a0";
+    hash = "sha256-B2ppssvdO986E7daEMk8TDPEhSaQR1VkwlnCJUtDcDQ=";
   };
 
   deps = callPackage ./build.zig.zon.nix { };

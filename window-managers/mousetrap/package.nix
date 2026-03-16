@@ -34,8 +34,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "g4b";
     repo = "mousetrap";
-    rev = "5c7785fbb557d6888b0f2913eeb4b40028cb02aa";
-    hash = "sha256-DgebH3dpQhl5cyQkRKzRmtnhdGmFWxTLJRjyrdhsd/s=";
+    rev = "b798297f2d40dad50f76707e0e18d1f3d36e5b95";
+    hash = "sha256-HsPWsOY3BnYc4BVKzpGtZinzvJj37PfFiMoLd6qem3c=";
   };
 
   nativeBuildInputs = [

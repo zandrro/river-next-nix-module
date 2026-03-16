@@ -17,7 +17,7 @@ pixman,
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "beansprout";
-  version = "unstable-2026-02-20";
+  version = "unstable-2026-03-16";
 
   src = fetchFromCodeberg {
     owner = "bwbuhse";

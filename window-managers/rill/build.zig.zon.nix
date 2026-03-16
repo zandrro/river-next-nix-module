@@ -8,10 +8,10 @@
 
 linkFarm "zig-packages" [
   {
-    name = "1220997e7559328728919efc4096c7e8d68ce51502f4e0d03e1c79a313992e22532a";
+    name = "wayland-0.5.0-lQa1knz8AQCh08NA8BeQrwJB9U3CfqcVAdHZYGRKIGuu";
     path = fetchzip {
-      url = "https://codeberg.org/ifreund/zig-wayland/archive/main.tar.gz";
-      hash = "sha256-DwBIY4v6jZ7YhCRFvYujRmpIVtO9hSSpIbESpl6hbIU=";
+      url = "https://codeberg.org/ifreund/zig-wayland/archive/v0.5.0.zip";
+      hash = "sha256-mhqOtC26iACIvQUq74AbLSXSPsnWMi3AvDV7G2uElpo=";
     };
   }
 ]
