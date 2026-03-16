@@ -29,6 +29,7 @@ let
     rrwm = pkgs.callPackage ./window-managers/rrwm/package.nix { };
     tarazed = pkgs.callPackage ./window-managers/tarazed/package.nix { };
     zrwm = pkgs.callPackage ./window-managers/zrwm/package.nix { };
+    reka = pkgs.callPackage ./window-managers/reka/package.nix { };
   };
   selectedWMs = map (name: localPkgs.${name}) cfg.windowManagers;
 in
@@ -80,6 +81,7 @@ in
         "mousetrap"
         "orilla"
         "pwm"
+        "reka"
         "rhine"
         "rijan"
         "rill"
@@ -229,9 +231,16 @@ in
 
                 exec /run/current-system/sw/bin/${windowManager}
               '';
-              launcher = pkgs.writeShellScript "river-${windowManager}-launcher" ''
-                exec dbus-run-session -- /run/current-system/sw/bin/river -c ${initScript}
-            '';
+              launcher = pkgs.writeShellScript "river-${windowManager}-launcher" '' # CURRENTLY REKA SESSION IS BUGGED, LAUNCH VIA TTY.
+                ${if windowManager == "reka" then ''
+                  exec dbus-run-session -- /run/current-system/sw/bin/river -c \
+                    '${pkgs.emacs}/bin/emacs \
+                      --directory ${localPkgs.reka.reka-lib}/share/emacs/site-lisp \
+                      --directory ${localPkgs.reka}/share/emacs/site-lisp'
+                '' else ''
+                  exec dbus-run-session -- /run/current-system/sw/bin/river -c ${initScript}
+                ''}
+              '';
             in
             pkgs.writeTextFile {
               name = "river-${windowManager}-session";
