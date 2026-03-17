@@ -3,6 +3,9 @@ River development has undergone drastic changes, with new design principles, com
 
 Rather than wait for the release, I wanted to build it locally now, to try out the changes. Plus, given how the compositor works, a dozen or so of window managers would need to be packaged to actually run something in `river-next`. This repository does exactly that: it builds the new River package, along with all supported window managers (see below) and a NixOS module. 
 
+I plan to update packages roughly once a week, ideally on Mondays. Package names (aside from River) will reflect this if they receive changes. Later I plan to adjust this to update based on their actual commit histories.  
+**Last package update: 16-03-2026.**
+
 ## Contents
 This repo has/will contain the following:
 - [x] River 0.5.0 (from main branch)
@@ -15,7 +18,7 @@ This repo has/will contain the following:
   - [x]  mousetrap - Minimal stumpwm/ratpoison-like window manager, using modern c++
   - [x]  orilla - Dynamic tiling window manager inspired by XMonad, written in Rust
   - [x]  pwm - Tiling window manager with SSD titlebars and Python API
-  - [x]  reka - An Emacs-based WM for river (similar to EXWM)*
+  - [x]  reka - An Emacs-based WM for river (similar to EXWM)
   - [x]  rhine - Tiling window manager with a bsp layout, some Hyprland IPC for bars and ambitions of modularity
   - [x]  rijan - Small dynamic tiling window manager in 600 lines of Janet
   - [x]  rill - A minimalist scrolling window manager with simple animation, written in Zig
@@ -36,11 +39,7 @@ Please note that all the packages here are pulling changes against their respect
 
 Furthermore, it is highly recommended for users with multi-monitor setups to to configure outputs via tools like `kanshi`. This is because not all window managers support output management on their own, which will lead to incorrectly positioned windows or even crashes altogether.
 
-(17-03-2026): `reka` currently only launches via tty session. Even though there is a desktop session entry provided by the module, it will not work at all. To run it for now, you will need to:
- 
-  1. Add *(require 'reka)* and *(reka-enable)* to your *init.el* or the equivalent in your configuration.
-  2. Enter a tty session.
-  3. Launch reka by running: `river -c "emacs --directory /nix/store/...reka-lib-unstable-2026-03-16/share/emacs/site-lisp --directory /nix/store/...emacs-reka-unstable-2026-03-16/share/emacs/site-lisp"`
-  4. Proceed with using reka.
-    
-I will fix it once I recover from flu and when I have time.
+(17-03-2026): `reka`'s desktop session entry now works as intended. However, note that it **will not launch via GDM**. TTY or something similar like `ly` will launch it correctly, though.  
+Might just be a "GDM moment", but I do not plan to investigate further. That said, below are some tips:
+  1. If you are going to launch it through TTY, run `exec /nix/store/...river-reka-launcher` and enjoy.
+  2. If running through `ly` or similar, look for the *River (Reka)* entry in the session list. Select it, log in, and enjoy.
