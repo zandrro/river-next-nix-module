@@ -41,7 +41,7 @@ if $do_update; then
   latest_rev=$(git ls-remote https://codeberg.org/river/river refs/heads/main | cut -f1)
   hash=$(nix-prefetch-git --url https://codeberg.org/river/river --rev "$latest_rev" | jq -r '.hash')
 
-  update_src "$SCRIPT_DIR/river-dev.nix" "$latest_rev" "$hash"
+  update_src "$SCRIPT_DIR/river-next.nix" "$latest_rev" "$hash"
 
   wget "https://codeberg.org/river/river/raw/commit/${latest_rev}/build.zig.zon" -O "$SCRIPT_DIR/build.zig.zon"
   zon2nix "$SCRIPT_DIR/build.zig.zon" > "$SCRIPT_DIR/build.zig.zon.nix"
@@ -67,7 +67,7 @@ if $do_build; then
   echo ""
   echo "Building river..."
   river_log="/tmp/river-build-river.log"
-  if nix-build -E "with import <nixpkgs> {}; callPackage $SCRIPT_DIR/river-dev.nix {}" \
+  if nix-build -E "with import <nixpkgs> {}; callPackage $SCRIPT_DIR/river-next.nix {}" \
       --no-out-link >"$river_log" 2>&1; then
     rm -f "$river_log"
   else

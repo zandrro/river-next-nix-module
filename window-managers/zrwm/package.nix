@@ -60,8 +60,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~zuki";
     repo = "zrwm";
-    rev = "a62d69b2d28aa81b18db03a4bc597a78ddb59969";
-    hash = "sha256-eP9OjtIVyXjJBCcrp3DhpAFlW6KjR33AA9V+EoSoNfI=";
+    rev = "d36851012c15b81498900dfd68d6fc56cf828699";
+    hash = "sha256-q0iOCaCWMaMWRQOTXRpo/SAPBQB0Nf+EdK+aapwP4+w=";
   };
 
   nativeBuildInputs = [

@@ -4,7 +4,7 @@ River development has undergone drastic changes, with new design principles, com
 Rather than wait for the release, I wanted to build it locally now, to try out the changes. Plus, given how the compositor works, a dozen or so of window managers would need to be packaged to actually run something in `river-next`. This repository does exactly that: it builds the new River package, along with all supported window managers (see below) and a NixOS module. 
 
 I plan to update packages roughly once a week, ideally on Mondays. Package versions (aside from River) will reflect this if they receive changes. Later I plan to adjust this to update based on their actual commit histories.  
-**Last package update: 16-03-2026.**
+**Last package update: 22-03-2026.**
 
 ## Contents
 This repo has/will contain the following:

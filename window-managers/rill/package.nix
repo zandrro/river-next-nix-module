@@ -20,8 +20,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "lzj15";
     repo = "rill";
-    rev = "656d375bb40b961ad25efdadae8ee32412148906";
-    hash = "sha256-GEhH8vJRTjDCUDD5oMV2m0HUvIlXdr4qUTtYJ/y3nKM=";
+    rev = "9d992b734a5063621fdc4e6556a32e5afdaa041d";
+    hash = "sha256-uLux0vs0kcodRIyhe/yXMO2LlBS8GAt7jAnIk2C3xL4=";
   };
 
   deps = callPackage ./build.zig.zon.nix { };
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional withManpages scdoc;
 
   postInstall = ''
-    install -Dm755 assets/config.zon -t $out/example/
+    install -Dm755 $src/config.zon -t $out/example/
   '';
 
   doInstallCheck = true;

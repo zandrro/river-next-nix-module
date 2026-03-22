@@ -21,8 +21,8 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "cap153";
     repo = "rrwm";
-    rev = "42826f21a7a1c104e6900de3e87a4d0c5cf0c62a";
-    hash = "sha256-mI//8riGr41gUt0Ws/t6x8ycSaqS38LwnF5epjMUOo0=";
+    rev = "42a709f7240c2ef6a67d0258127cb460dd20f17e";
+    hash = "sha256-8uIB+kpqWvK7O1Gb0HwO6oaNecFcXyT9KJcqk5vElDc=";
   };
 
   cargoHash = "sha256-8OiF34Aa/jH82MAcQ5HnIW+4Bi9wLK904kfJvdHVrEc=";

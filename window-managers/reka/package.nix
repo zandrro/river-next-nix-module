@@ -19,11 +19,11 @@ let
     src = fetchFromCodeberg {
       owner = "tazjin";
       repo = "reka";
-      rev = "8441e6eaf4b76f7085a25d3dafa0ef281d4cb009";
-      hash = "sha256-KXAClKjYfkit6n89YTZ83qzp4n81bEXZ2cFGliZZOxQ=";
+      rev = "e6c6ac359f0331054f311d873ee7db52a3f84b0f";
+      hash = "sha256-LLuPu51318aF7Z53K5Sko5FpjVSfMlSatfa8Y9/w1jU=";
     };
 
-    cargoHash = "sha256-qSyx2tzWMBr56Lbdjy+DJVuaHJmtxzKlFZivG7VA1d8=";
+    cargoHash = "sha256-h5FTiU6zR0+w0KVnrjjaeQkSXOuCrQOXbZinJMLrNiY=";
 
     nativeBuildInputs = [
       pkg-config
@@ -47,7 +47,7 @@ emacsPackages.trivialBuild {
   version = "unstable-2026-03-16";
   src = fetchurl {
     url = "https://codeberg.org/tazjin/reka/raw/branch/canon/lisp/reka.el";
-    hash = "sha256-K4uk1Zuct0xpth/MyJNbhJ+qm2yia0zDoNplA/YX1kU=";
+    hash = "sha256-LLdH9NiKquFjrzly7uKnG/+QQKw+DA5khT6ggJx/SmM=";
   };
   packageRequires = [ reka ];
 

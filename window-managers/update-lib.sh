@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Shared helpers for river-dev update scripts.
+# Shared helpers for river-next update scripts.
 #
 # update_src <nix-file> <new-rev> <new-hash>
 #   Replaces the `rev` string and the `hash` that immediately follows it in

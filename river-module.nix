@@ -14,7 +14,7 @@ let
     ;
 
   localPkgs = {
-    river-next = pkgs.callPackage ./river-dev.nix { };
+    river-next = pkgs.callPackage ./river-next.nix { };
     beansprout = pkgs.callPackage ./window-managers/beansprout/package.nix { };
     canoe = pkgs.callPackage ./window-managers/canoe/package.nix { };
     kuskokwim = pkgs.callPackage ./window-managers/kuskokwim/package.nix { };

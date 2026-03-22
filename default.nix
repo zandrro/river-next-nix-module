@@ -2,7 +2,7 @@
   nixosModule = import ./river-module.nix;
 
   packages = {
-    river-next = ./river-dev.nix;
+    river-next = ./river-next.nix;
     beansprout = ./window-managers/beansprout/package.nix;
     canoe = ./window-managers/canoe/package.nix;
     kuskokwim = ./window-managers/kuskokwim/package.nix;

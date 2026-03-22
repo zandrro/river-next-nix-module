@@ -10,7 +10,9 @@
   pkg-config,
   wayland-scanner,
 }:
-
+let
+  river-next = callPackage ../../river-next.nix { };
+in
 stdenv.mkDerivation (finalAttrs: {
   pname = "rhine";
   version = "unstable-2026-03-16";
@@ -18,8 +20,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "Sivecano";
     repo = "rhine";
-    rev = "33b491cc8291510f846a695ef73468e8c63d36c5";
-    hash = "sha256-h74l11CNwD4AxU39deAGge+72VvPMgi4zcV1GHntAl4=";
+    rev = "090284707bd6d182a288b9d9cbbf18d0339c811b";
+    hash = "sha256-UIvSoKZ3eEbGuOHdbDp86L86EY+R3zvEvFtpp8KKzZs=";
   };
 
   deps = callPackage ./build.zig.zon.nix { };
@@ -29,11 +31,17 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-scanner
     wayland-protocols
     pkg-config
+    river-next
   ];
   buildInputs = [
     libxkbcommon
     wayland
   ];
+
+  postPatch = ''
+    substituteInPlace build.zig \
+      --replace-fail '"../river-protocols/stable/"' '"${river-next}/share/river-protocols/stable/"'
+  '';
 
   postInstall = ''
     install -Dm755 $src/config.rh -t $out/examples/
