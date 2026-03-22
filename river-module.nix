@@ -21,6 +21,7 @@ let
     kwm = pkgs.callPackage ./window-managers/kwm/package.nix { };
     machi = pkgs.callPackage ./window-managers/machi/package.nix { };
     mousetrap = pkgs.callPackage ./window-managers/mousetrap/package.nix { };
+    notion-river = pkgs.callPackage ./window-managers/notion-river/package.nix { };
     orilla = pkgs.callPackage ./window-managers/orilla/package.nix { };
     pwm = pkgs.callPackage ./window-managers/pwm/package.nix { };
     rhine = pkgs.callPackage ./window-managers/rhine/package.nix { };
@@ -79,6 +80,7 @@ in
         "kwm"
         "machi"
         "mousetrap"
+        "notion-river"
         "orilla"
         "pwm"
         "reka"
