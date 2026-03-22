@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "unstable-2026-03-16";
 
   src = fetchFromCodeberg {
-    owner = "bwbuhse";
+    owner = "beansprout";
     repo = "beansprout";
     rev = "f055b55a9454612b92d99341fcae88e5a6979426";
     hash = "sha256-KXLD7GSxO6iWSEX1d3QduM3oLfBJhxjofE1Wh0eKbMs=";

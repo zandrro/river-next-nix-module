@@ -3,13 +3,13 @@
 
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
-latest_rev=$(git ls-remote https://codeberg.org/bwbuhse/beansprout refs/heads/main | cut -f1)
-hash=$(nix-prefetch-git --url https://codeberg.org/bwbuhse/beansprout --rev "$latest_rev" | jq -r '.hash')
+latest_rev=$(git ls-remote https://codeberg.org/beansprout/beansprout refs/heads/main | cut -f1)
+hash=$(nix-prefetch-git --url https://codeberg.org/beansprout/beansprout --rev "$latest_rev" | jq -r '.hash')
 
 source "$SCRIPT_DIR/../update-lib.sh"
 update_src "$SCRIPT_DIR/package.nix" "$latest_rev" "$hash"
 
-wget "https://codeberg.org/bwbuhse/beansprout/raw/commit/${latest_rev}/build.zig.zon" -O "$SCRIPT_DIR/build.zig.zon"
+wget "https://codeberg.org/beansprout/beansprout/raw/commit/${latest_rev}/build.zig.zon" -O "$SCRIPT_DIR/build.zig.zon"
 zon2nix "$SCRIPT_DIR/build.zig.zon" > "$SCRIPT_DIR/build.zig.zon.nix"
 
 sed -i 's|url = "\(https://[^"?]*\)?ref=[^"]*"|url = "\1"|g' "$SCRIPT_DIR/build.zig.zon.nix"
