@@ -182,6 +182,10 @@ in
         xwayland.enable = cfg.xwayland.enable;
       };
 
+      services = {
+        emacs.enable = builtins.elem "reka" cfg.windowManagers;
+      };
+
       services.graphical-desktop.enable = true;
       services.xserver.desktopManager.runXdgAutostartIfNone = lib.mkDefault true;
 
