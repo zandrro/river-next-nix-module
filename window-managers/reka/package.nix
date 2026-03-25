@@ -47,7 +47,7 @@ emacsPackages.trivialBuild {
   version = "unstable-2026-03-16";
   src = fetchurl {
     url = "https://codeberg.org/tazjin/reka/raw/branch/canon/lisp/reka.el";
-    hash = "sha256-LLdH9NiKquFjrzly7uKnG/+QQKw+DA5khT6ggJx/SmM=";
+    hash = "sha256-1VqU2aLrO13rIVksM4guDdOVfC4CEdZkotleTyBApoc=";
   };
   packageRequires = [ reka ];
 
